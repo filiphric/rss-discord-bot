@@ -1,0 +1,22 @@
+{
+  "name": "rss-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for sending RSS feed updates",
+  "main": "app.ts",
+  "scripts": {
+    "lint": "tsc",
+    "start": "node app.js"
+  },
+  "type": "module",
+  "keywords": ["discord", "rss"],
+  "author": "Filip hric",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "rss-parser": "^3.13.0",
+    "typescript": "^5.1.3"
+  }
+}
