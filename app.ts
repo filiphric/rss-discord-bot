@@ -5,8 +5,8 @@ import { Client, GatewayIntentBits, TextChannel } from 'discord.js';
 dotenv.config();
 
 let parser = new Parser();
-let feeds = ['https://filiphric.com/rss.xml'];
-let discordChannelId = '1120422830782300240';
+let feeds = ['https://filiphric.com/rss.xml', 'https://glebbahmutov.com/blog/atom.xml'];
+let discordChannelId = '779784441572229120';
 
 interface FeedItem {
   title: string;
