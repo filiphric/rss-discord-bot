@@ -5,8 +5,8 @@ import { Client, GatewayIntentBits, TextChannel } from 'discord.js';
 dotenv.config();
 
 let parser = new Parser();
-let feeds = ['https://filiphric.com/rss.xml', 'https://glebbahmutov.com/blog/atom.xml'];
-let discordChannelId = '779784441572229120';
+let feeds = ['https://filiphric.com/rss.xml', 'https://glebbahmutov.com/blog/atom.xml']; // add your own feeds
+let discordChannelId = '779784441572229120'; // add your own channel ID
 
 interface FeedItem {
   title: string;
@@ -25,7 +25,7 @@ let client = new Client({
 client.once('ready', async () => {
   console.log('Bot is ready!');
   let currentTime = new Date();
-  let oneHourAgo = new Date(currentTime.getTime() - (60 * 60 * 1000 * 24 * 90));
+  let oneHourAgo = new Date(currentTime.getTime() - (60 * 60 * 1000)); // checks rss items that are not older than 1 hour
 
   // iterate over feeds
   for (let feed of feeds) {
@@ -36,7 +36,7 @@ client.once('ready', async () => {
     for (let i = 0; i < items.length; i++) {
       if (new Date(items[i].pubDate) >= oneHourAgo) {
         let channel = client.channels.cache.get(discordChannelId) as TextChannel;
-        await channel.send(`\n**${items[i].title}**${items[i].content.length > 300 ? '' : '\n' + items[i].content}\n${items[i].link}`);
+        await channel.send(`\n**${items[i].title}**${items[i].content.length > 300 ? '' : '\n' + items[i].content}\n${items[i].link}`); // change the formatting of the messageaccordingly
       }
     }
   }

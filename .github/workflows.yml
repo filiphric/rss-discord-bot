@@ -18,6 +18,6 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Check RSS feed
-      run: node app.js
+      run: npm start
       env:
         DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
