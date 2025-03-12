@@ -6,7 +6,7 @@ dotenv.config();
 
 const parser = new Parser();
 const blogFeeds = ['https://filiphric.com/rss.xml', 'https://glebbahmutov.com/blog/atom.xml'];
-const videoFeeds = ['https://rss.app/feeds/F0c4yLQOAgohOHIN.xml'];
+const videoFeeds = ['https://rss.app/feeds/F0c4yLQOAgohOHIN.xml', 'https://rss.app/feeds/e91NpH7pJ6cLyolA.xml'];
 const blogChannelId = '779784441572229120';
 const videoChannelId = '826430677494661140';
 
