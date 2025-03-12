@@ -3,20 +3,23 @@
   "version": "1.0.0",
   "description": "Discord bot for sending RSS feed updates",
   "main": "app.ts",
-  "scripts": {
-    "lint": "tsc",
-    "start": "npm run lint && node app.js"
-  },
   "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/app.js",
+    "dev": "tsx watch app.ts"
+  },
   "keywords": ["discord", "rss"],
   "author": "Filip hric",
   "license": "ISC",
-  "devDependencies": {
-    "dotenv": "^16.3.1"
-  },
   "dependencies": {
-    "discord.js": "^14.11.0",
-    "rss-parser": "^3.13.0",
-    "typescript": "^5.1.3"
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.24"
   }
 }
