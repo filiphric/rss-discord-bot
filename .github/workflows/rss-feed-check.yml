@@ -10,10 +10,10 @@ jobs:
     name: Check Blog and Video RSS Feeds
     steps:
     - name: Check out code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: '22'
         cache: 'npm'
